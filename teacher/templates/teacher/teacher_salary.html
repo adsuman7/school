@@ -1,0 +1,8 @@
+salary:<h1>{{fees}}</h1>
+Last_payment_date:<h1>{{pay_date}}</h1>
+<form method="POST">
+	{% csrf_token %}
+	{{form.as_p}}
+	<input type="submit" name="submit">	
+	
+</form>

@@ -1,0 +1,68 @@
+{% load static %}
+{% load users_tags %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Profile</title>
+
+        <!-- Icon css link -->
+        <link href="{% static 'teacher/teacher_profile/vendors/material-icon/css/materialdesignicons.min.css' %}" rel="stylesheet">
+        <link href="{% static 'teacher/teacher_profile/css/font-awesome.min.css' %}" rel="stylesheet">
+        <link href="{% static 'teacher/teacher_profile/vendors/linears-icon/style.css' %}" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="{% static 'teacher/teacher_profile/css/bootstrap.min.css' %}" rel="stylesheet">
+        
+        <!-- Extra plugin css -->
+        <link href="{% static 'teacher/teacher_profile/vendors/owl-carousel/assets/owl.carousel.css' %}" rel="stylesheet">
+        <link href="{% static 'teacher/teacher_profile/vendors/animate-css/animate.css' %}" rel="stylesheet">
+        
+        <link href="{% static 'teacher/teacher_profile/css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'teacher/teacher_profile/css/responsive.css' %}" rel="stylesheet">
+        
+        <link rel="stylesheet" href="{% static 'teacher/teacher_profile/css/colors/default.css' %}" title="default">
+        <link rel="alternate stylesheet" href="{% static 'teacher/teacher_profile/css/colors/orange.css' %}" title="orange">
+        <link rel="alternate stylesheet" href="{% static 'teacher/teacher_profile/css/colors/pink.css' %}" title="pink">
+        <link rel="alternate stylesheet" href="{% static 'teacher/teacher_profile/css/colors/violet.css' %}" title="violet">
+        <link rel="alternate stylesheet" href="{% static 'teacher/teacher_profile/css/colors/blue.css' %}" title="blue">
+        <link rel="alternate stylesheet" href="{% static 'teacher/teacher_profile/css/colors/past.css' %}" title="past">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    {% block content %}{% endblock %}
+ 	 <script src="{% static 'teacher/teacher_profile/js/jquery-2.1.4.min.js' %}"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="{% static 'teacher/teacher_profile/js/bootstrap.min.js' %}"></script>
+        <!-- Extra plugin js -->
+        <script src="{% static 'teacher/teacher_profile/vendors/counter-up/waypoints.min.js' %}"></script>
+        <script src="{% static 'teacher/teacher_profile/vendors/counter-up/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'teacher/teacher_profile/vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'teacher/teacher_profile/vendors/isotope/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'teacher/teacher_profile/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+        
+        <script src="{% static 'teacher/teacher_profile/vendors/style-switcher/styleswitcher.js' %}"></script>
+        <script src="{% static 'teacher/teacher_profile/vendors/style-switcher/switcher-active.js' %}"></script>
+        
+        <script src="{% static 'teacher/teacher_profile/vendors/animate-css/wow.min.js' %}"></script>
+
+        <!--gmaps Js-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+        <script src="{% static 'teacher/teacher_profile/js/gmaps.min.js' %}"></script>
+        
+        <!-- contact js -->
+        <script src="{% static 'teacher/teacher_profile/js/jquery.form.js' %}"></script>
+        <script src="{% static 'teacher/teacher_profile/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'teacher/teacher_profile/js/contact.js' %}"></script>
+        
+        <script src="{% static 'teacher/teacher_profile/js/theme.js' %}"></script>
+    </body>
+</html>

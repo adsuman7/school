@@ -1,0 +1,4 @@
+{% for notice in notices %}
+	<a href="{%url 'notice-detail' notice.id%}">{{notice.title}}</a>
+	<a href="{%url 'notice-detail' notice.id%}">{{notice.date_posted}}</a>
+{% endfor %}

@@ -1,0 +1,5 @@
+{% for staff in staffs %}
+<form action="">
+	<a href="{% url 'staff-detail' staff.id %}">{{staff.first_name}} {{staff.last_name}}</a>
+</form>
+{% endfor %}
