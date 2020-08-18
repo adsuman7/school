@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		 table, th, td {
+  			border: 1px solid black;
+		}
+
+	</style>
+</head>
+<body>
+		<table style="width:100%">
+				<tr>
+    <th>Book_name</th>
+    
+    <th>edition</th>
+    <th>writer</th>
+    <th>subject</th>
+    <th>total_quantity</th>
+  	<th>remaining_quantity</th>
+  </tr>
+{%for book in books %}
+	<a href="">
+		
+			<tr>
+			<th>{{book.name}}</th>
+			
+			<th>{{book.edition}}</th>
+			<th>{{book.writer}}</th>
+			<th>{{book.subject}}</th>
+			
+			<th>{{book.total_quantity}}</th>
+			<th>{{book.remaining_quantity}}</th>
+			{%if book.remaining_quantity == 0%}
+			<a href="{%url 'book-booked' book.id%}"><button>return</button></a>
+			{%else%}
+			<th><a href="{%url 'book-booked' book.id%}"><button>Book</button></a></th>
+			{%endif%}
+			</tr>
+			
+
+	</a>
+
+{% endfor %}
+</table>
+</body>
+</html>
+
+
+

@@ -1,0 +1,5 @@
+{% for teacher in teachers %}
+<form action="">
+	<a href="{% url 'teacher-detail' teacher.id %}">{{teacher.first_name}} {{teacher.last_name}}</a>
+</form>
+{% endfor %}

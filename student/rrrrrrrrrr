@@ -1,0 +1,9 @@
+
+date=dateissue-current date
+change in months and days
+month=
+total=month*monthlyfee+due
+def payfee
+	given=
+	due=total-given
+	dateissue=current_date

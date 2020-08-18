@@ -1,0 +1,95 @@
+{% load static %}
+{% load users_tags%}
+<!DOCTYPE html>
+<html lang="en">
+	  <head>
+	    <title>Fox University - Free Bootstrap 4 Template by Colorlib</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+	    <link rel="stylesheet" href="{% static 'blog/css/open-iconic-bootstrap.min.css' %}">
+	    <link rel="stylesheet" href="{% static 'blog/css/animate.css' %}">
+
+	    <link rel="stylesheet" href="{% static 'blog/css/owl.carousel.min.css' %}">
+	    <link rel="stylesheet" href="{% static 'blog/css/owl.theme.default.min.css' %}">
+	    <link rel="stylesheet" href="{% static 'blog/css/magnific-popup.css' %}">
+
+	    <link rel="stylesheet" href="{% static 'blog/css/aos.css' %}">
+
+	    <link rel="stylesheet" href="{% static 'blog/css/ionicons.min.css' %}">
+
+	    <link rel="stylesheet" href="{% static 'blog/css/flaticon.css' %}">
+	    <link rel="stylesheet" href="{% static 'blog/css/icomoon.css' %}">
+	    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+	  </head>
+	  <body>
+
+	  		<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center px-4">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <form action="#" class="searchform order-lg-last">
+          <div class="form-group d-flex">
+            <input type="text" class="form-control pl-3" placeholder="Search">
+            <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
+          </div>
+        </form>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+	        	<li class="nav-item"><a href="{%url 'teacher-list'%}" class="nav-link">Staff</a></li>
+	        	<li class="nav-item"><a href="{%url 'blog-list' %}" class="nav-link">Blog</a></li>
+
+	        	<li class="nav-item"><a href="{%url 'book-create' %}" class="nav-link">bookadd</a></li>
+	        	<li class="nav-item"><a href="{%url 'book-list' %}" class="nav-link">booklist</a></li>
+	        	<li class="nav-item"><a href="{%url 'notice-list' %}" class="nav-link">notice</a></li>
+
+	            
+	            {% if user.student.first_name or user.teacher.last_name %}
+	            	<li class="nav-item"><a href="{% urls user %}" class="nav-link">{{user.username}}</a></li>
+	            {% endif %}
+	            {% if user.student.first_name %}
+	            	<li class="nav-item"><a href="{%url 'student-fee' user.studentinfo.id %}" class="nav-link">fee</a></li>
+	            	<li class="nav-item"><a href="{%url 'student-fee' user.studentinfo.id %}" class="nav-link">attendence</a></li>
+	            	<li class="nav-item"><a href="{%url 'attendence-create' user.studentinfo.class_name %}" class="nav-link">attendence</a></li>
+	            {% endif %}
+
+	            {% if user.is_authenticated %}
+		            <li class="nav-item"><a href="{% urls user %}" class="nav-link">{{user.username}}</a></li>
+		             </a></li>
+		            <li class="nav-item"><a href="{% url 'blog-create' %}" class="nav-link">createblog</a></li>
+		            <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+		            
+	        	{% else %}
+	        		<li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Signin</a></li>
+	        		<li class="nav-item"><a href="{% url 'register' %}" class="nav-link">SignUp</a></li>
+	         	{% endif %}
+	        </ul>
+	      </div>
+	    </div>
+ 	  </nav>
+			{% block content %}{% endblock %}
+		  <script src="{% static 'blog/js/jquery.min.js' %}"></script>
+		  <script src="{% static 'blog/js/jquery-migrate-3.0.1.min.js' %}"></script>
+		  <script src="{% static 'blog/js/popper.min.js' %}"></script>
+		  <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+		  <script src="{% static 'blog/js/jquery.easing.1.3.js' %}"></script>
+		  <script src="{% static 'blog/js/jquery.waypoints.min.js' %}"></script>
+		  <script src="{% static 'blog/js/jquery.stellar.min.js' %}"></script>
+		  <script src="{% static 'blog/js/owl.carousel.min.js' %}"></script>
+		  <script src="{% static 'blog/js/jquery.magnific-popup.min.js' %}"></script>
+		  <script src="{% static 'blog/js/aos.js' %}"></script>
+		  <script src="{% static 'blog/js/jquery.animateNumber.min.js' %}"></script>
+		  <script src="{% static 'blog/js/scrollax.min.js' %}"></script>
+		  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+		  <script src="{% static 'blog/js/google-map.js' %}"></script>
+		  <script src="{% static 'blog/js/main.js' %}"></script>
+
+	  </body>
+ </html>

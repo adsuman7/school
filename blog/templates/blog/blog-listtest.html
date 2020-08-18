@@ -1,0 +1,6 @@
+{% for blog in blogs %}
+	<a href="{%url 'blog-detail' blog.id%}">Title:{{blog.title}}<br>
+	Author:{{blog.author}}</a>
+
+
+{% endfor %}
